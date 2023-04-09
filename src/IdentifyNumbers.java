@@ -4,7 +4,7 @@ public class IdentifyNumbers {
 
     public static int TypeSymbol(char c){
         int i;
-        if (c== '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9') {
+        if (c == '0' || c== '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9') {
             i = 1;                                                 //арабские
         }
         else if (c == '*' || c == '/' || c == '+' || c == '-'){   //умножение деление
@@ -106,7 +106,85 @@ public static int Chislo(String s, int i){
         return stroka;
     }
 
+public static String ConvertRim(int c){
+        String answer = "";
+        if (c <= 0){
+            return "Cannot!";
+        }
 
+        int sot = 0, des = 0, edin = 0;
+        sot = c / 100;
+        des = (c - 100*sot) / 10;
+        edin = (c - 100*sot - 10*des);
+
+        if (sot == 1) {
+            return "C";
+        }
+        switch (des) {
+            case 1:
+                answer = answer + "X";
+                break;
+
+            case 2:
+                answer = answer + "XX";
+                break;
+            case 3:
+                answer = answer + "XXX";
+                break;
+            case 4:
+                answer = answer + "XL";
+                break;
+            case 5:
+                answer = answer + "L";
+                break;
+            case 6:
+                answer = answer + "LX";
+                break;
+            case 7:
+                answer = answer + "LXX";
+                break;
+            case 8:
+                answer = answer + "LXXX";
+                break;
+            case 9:
+                answer = answer + "XC";
+                break;
+        }
+        switch (edin) {
+            case 1:
+                answer = answer + "I";
+                break;
+
+            case 2:
+                answer = answer + "II";
+                break;
+            case 3:
+                answer = answer + "III";
+                break;
+            case 4:
+                answer = answer + "IV";
+                break;
+            case 5:
+                answer = answer + "V";
+                break;
+            case 6:
+                answer = answer + "VI";
+                break;
+            case 7:
+                answer = answer + "VII";
+                break;
+            case 8:
+                answer = answer + "VIII";
+                break;
+            case 9:
+                answer = answer + "IX";
+                break;
+
+        }
+return answer;
+
+
+}
 
 }
 
