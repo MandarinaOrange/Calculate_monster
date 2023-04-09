@@ -70,7 +70,7 @@ public static int Calcula (int a, int b, String s){
 
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        //System.out.println("Hello world!");
 
         Scanner keyboard = new Scanner (System.in);
         String primer = keyboard.nextLine();
